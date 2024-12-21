@@ -1,0 +1,222 @@
+<html>
+<head>
+    <title>Egyptian Tourist Attractions</title>
+    <link rel="stylesheet" href="styleH.css" />
+    <style>
+         body{margin: 0;}
+       .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+       }
+       .logo{
+        width: 250Px;
+        height: 90px;
+       }
+       .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1d699f;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            color: #1d699f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #1d699f;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links a {
+            animation: fadeIn 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        .nav-links a:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .nav-links a:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .nav-links a:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .nav-links a:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .nav-links a:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 50px;
+        }
+
+        th, td {
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="images/Goo-travel-website-e1677624115963.png"/>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="guide.html">Your Guide</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Egypt</a>
+        </div>
+        <div id="time" style="color:#1d699f; font-size: 24px;"></div>
+        <script>
+              window.setInterval(function(){
+                  var timeDate= new Date();
+                  document.getElementById("time").textContent=timeDate.getHours()+" : "+timeDate.getMinutes()+" : "+timeDate.getSeconds();
+              },1000);
+        </script>
+      </div>
+    </div>
+    <!-- Table for Giza Pyramids -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Giza Pyramids</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images2/pyramids/5k-great-pyramid-of-giza-egyptian-pyramids-assassins-creed-origins-wallpaper-preview.jpg" alt="Giza Pyramids"></td>
+                <td><img src="images2/pyramids/egypt-giza-necropolis-cairo-great-pyramid.jpg" alt="Giza Pyramids"></td>
+                <td><img src="images2/pyramids/egypt-pyramid-filter-pyramids-of-giza-wallpaper-preview.jpg" alt="Giza Pyramids"></td>
+                <td><img src="images2/pyramids/nature-world-animals-desert-egypt-camels-giza-pyramids-great-pyramid-of-giza-1920x1080-nature-deserts-hd-art-wallpaper-preview.jpg" alt="Giza Pyramids"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for Egyptian Museum -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Egyptian Museum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images2/egyptian musuem/ancient-antique-art-coffin.jpg" alt="Egyptian Museum"></td>
+                <td><img src="images2/egyptian musuem/free-photo-of-grand-egyptian-museum-gallery-interior-in-cairo.jpeg" alt="Egyptian Museum"></td>
+                <td><img src="images2/egyptian musuem/pexels-photo-4353815.jpeg" alt="Egyptian Museum"></td>
+                <td><img src="images2/egyptian musuem/pharaonic-tutankhamun-egypt-golden-burial-chamber-gold-mask.jpg" alt="Egyptian Museum"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for Karnak Temple -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Karnak Temple</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images2/karnak/columns-egypt-karnak-nighttime.jpg" alt="Karnak Temple"></td>
+                <td><img src="images2/karnak/egypt-ancient-archeology-luxor.jpg" alt="Karnak Temple"></td>
+                <td><img src="images2/karnak/egypt-karnak-travelling-historical.jpg" alt="Karnak Temple"></td>
+                <td><img src="images2/karnak/egypt-luxor-karnak-temple-architecture.jpg" alt="Karnak Temple"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for Khan el-Khalili -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Khan el-Khalili</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images2/khan/istockphoto-1286062866-612x612.jpg" alt="Khan el-Khalili"></td>
+                <td><img src="images2/khan/istockphoto-458640577-612x612.jpg" alt="Khan el-Khalili"></td>
+                <td><img src="images2/khan/istockphoto-992735534-612x612.jpg" alt="Khan el-Khalili"></td>
+                <td><img src="images2/khan/istockphoto-992735590-612x612.jpg" alt="Khan el-Khalili"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for Salah El-Din Citadel -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Salah El-Din Citadel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images2/salah/gettyimages-1199011216-612x612.jpg" alt="Salah El-Din Citadel"></td>
+                <td><img src="images2/salah/gettyimages-1310879578-612x612.jpg" alt="Salah El-Din Citadel"></td>
+                <td><img src="images2/salah/gettyimages-1362321014-612x612.jpg" alt="Salah El-Din Citadel"></td>
+                <td><img src="images2/salah/gettyimages-1421312848-612x612.jpg" alt="Salah El-Din Citadel"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for Sharm El-Sheikh -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">Sharm El-Sheikh</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images2/sharm/5bd3ab8d5a4ff-wallpaper-preview.jpg" alt="Sharm El-Sheikh"></td>
+                <td><img src="images2/sharm/manta-ray-underwater-manta-ocean.jpg" alt="Sharm El-Sheikh"></td>
+                <td><img src="images2/sharm/resort-travel-tourism-the-royal-savoy-sharm-el-sheikh-wallpaper-preview.jpg" alt="Sharm El-Sheikh"></td>
+                <td><img src="images2/sharm/tourism-best-hotels-of-2017-egypt-savoy-sierra-sharm-el-sheikh-hotel-wallpaper-preview.jpg" alt="Sharm El-Sheikh"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

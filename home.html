@@ -1,0 +1,121 @@
+<html>
+  <head>
+<style>
+          .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1d699f;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            color: #1d699f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #1d699f;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links a {
+            animation: fadeIn 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        .nav-links a:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .nav-links a:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .nav-links a:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .nav-links a:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .nav-links a:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+</style>
+    
+    <title>Travel Website</title>
+    
+    <link rel="stylesheet" href="styleH.css" />
+  
+</head>
+  <body>
+    <div class="header">
+      <img
+        class="logo"
+        src="images/Goo-travel-website-e1677624115963.png"
+        alt="Travel Website Logo"
+      />
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="guide.html">Your Guide</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About Egypt</a>
+      </div>
+      <div id="time" style="color:#1d699f; font-size: 24px;"></div>
+      <script>
+            window.setInterval(function(){
+                var timeDate= new Date();
+                document.getElementById("time").textContent=timeDate.toDateString()
+            },1000);
+      </script>
+    </div>
+    <div class="main-content">
+      <div>
+        <h2>Welcome to our page</h2>
+        <h1>This is the best website to know all things about Egypt</h1>
+        <h3>
+          Egypt, located in the northeastern corner of Africa, was home to one
+          of the principal civilizations of the ancient Middle East. The
+          heartland of Egypt is the Nile River valley and delta, where one of
+          the world’s earliest urban and literate societies emerged. The ancient
+          Egyptians were known for their expertise in farming, construction, and
+          inventions such as the solar calendar and hieroglyphic writing. Today,
+          Egypt remains the most populous country in the Arab world, with most
+          of its population concentrated along the fertile Nile River valley and
+          delta.
+        </h3>
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+          <button>SEARCH</button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="images/download (1).jpg"
+          alt="A beautiful image representing Egypt"
+        />
+      </div>
+    </div>
+  </body>
+</html>

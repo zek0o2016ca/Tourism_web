@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>travel website</title>
+        <link rel="stylesheet" href="styleH.css" />
+    <style>
+       body{margin: 0;}
+       .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+       }
+       .logo{
+        width: 250px;
+       }
+       .center-text {
+            text-align: center;
+        }
+        .trending-cards{
+            display: flex;
+            justify-content: center;
+        }
+       .cards{
+        width: 400px;
+        text-align: center;
+        padding: 10px;
+       } 
+       .card-info{
+        background-color:aliceblue;
+        padding: 5px 25px;
+        border-radius:0 0 20px 20px;
+       }
+       .img{
+        width:400px;
+        height: 225;
+        border-radius: 20px 20px 0 0 ;
+       }
+       .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1d699f;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            color: #1d699f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #1d699f;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links a {
+            animation: fadeIn 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        .nav-links a:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .nav-links a:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .nav-links a:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .nav-links a:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .nav-links a:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <img class="logo" src="images/Goo-travel-website-e1677624115963.png"/>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="guide.html">Your Guide</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About Egypt</a>
+            </div>
+            <div id="time" style="color:#1d699f; font-size: 24px;"></div>
+            <script>
+                  window.setInterval(function(){
+                      var timeDate= new Date();
+                      document.getElementById("time").textContent=timeDate.getHours()+" : "+timeDate.getMinutes()+" : "+timeDate.getSeconds();
+                  },1000);
+            </script>
+          </div>
+        </div>
+    <div>
+        <div class="center-text">
+            <h1>SERVICES</h1>
+        </div>
+  <div class="trending-cards">
+            <div class="cards">
+                <img class="img" src="images/hotels-booking.jpg"/>
+                <div class="card-info">
+                    <div>
+                       <span style="font-size: 30;">HOTELS</span>
+                        <p>"Stay comfortably without breaking the bank. Discover quality hotels at budget-friendly prices."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <img class="img" src="images/guide.jpg"/>
+                <div class="card-info">
+                    <div>
+                       <span style="font-size: 30;">SAFTEY GUIDE</span>
+                        <p>"Travel with confidence using our reliable safety tips and expert advice for every destination."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <img class="img" src="images/food.jpg"/>
+                <div class="card-info">
+                    <div>
+                       <span style="font-size: 30;">FOOD & DRINKS</span>
+                        <p>"Indulge in delicious meals and refreshing drinks that make your travel experience unforgettable."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="trending-cards">
+            <div class="cards">
+                <img class="img" src="images/world.jpg"/>
+                <div class="card-info">
+                    <div class="card-name">
+                       <span style="font-size: 30;">AROUND THE WORLD</span>
+                        <p>"Explore global destinations and immerse yourself in cultures, landscapes, and adventures worldwide."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <img class="img" src="images/fast.jpg"/>
+                <div class="card-info">
+                    <div class="card-name">
+                       <span style="font-size: 30;">FASTEST TRAVEL</span>
+                        <p>"Save time with efficient travel options that get you to your destination quickly and comfortably."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <img class="img" src="images/adv.jpg"/>
+                <div class="card-info">
+                    <div class="card-name">
+                       <span style="font-size: 30;">ADVENTURES</span>
+                        <p>"Embark on thrilling adventures, from hiking trails to outdoor excursions, designed for explorers."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    </body>
+</html>

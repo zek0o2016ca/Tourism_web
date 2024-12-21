@@ -1,0 +1,178 @@
+<html>
+    <head>
+
+               <title>  About  </title>
+               <link rel="stylesheet" href="styleH.css" />
+             <style>
+
+.main-content p {
+    max-width: 800px;
+    line-height: 1.4;
+  }
+        table {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid grey;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: grey;
+        }
+        img {
+            border-radius: 10px;
+            max-width: 150px; /* Minimized the image width */
+            height: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1d699f;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            color: #1d699f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #1d699f;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links a {
+            animation: fadeIn 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        .nav-links a:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .nav-links a:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .nav-links a:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .nav-links a:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .nav-links a:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+            </style>
+    </head>
+<body>
+    <div class="header">
+        <img
+          class="logo"
+          src="images/Goo-travel-website-e1677624115963.png"
+          alt="Travel Website Logo"
+        />
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="guide.html">Your Guide</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About Egypt</a>
+        </div>
+          <div id="time" style="color:#1d699f; font-size: 24px;"></div>
+          <script>
+                window.setInterval(function(){
+                    var timeDate= new Date();
+                    document.getElementById("time").textContent=timeDate.getHours()+" : "+timeDate.getMinutes()+" : "+timeDate.getSeconds();
+                },1000);
+          </script>
+        </div>
+        <main class="main-content">
+            <table>
+                <tr>
+                    <th>Content</th>
+                    <th>Image</th>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Tutankhamun</h2>
+                        <p>
+                            Tutankhamun was an ancient Egyptian pharaoh who ruled circa 1332–1323 BC during the late Eighteenth Dynasty of ancient Egypt.
+                            Born Tutankhaten, he was likely a son of Akhenaten. Tutankhamun acceded to the throne around the age of nine following the short reigns of his predecessors Smenkhkare and Neferneferuaten.
+                            He married his half-sister Ankhesenpaaten, who was probably the mother of his two infant daughters.
+                            Tutankhamun died unexpectedly aged about 18; his health and the cause of his death have been the subject of much debate.
+                        </p>
+                    </td>
+                    <td>
+                        <figure>
+                            <img src="images/Tut.jpg" alt="Tutankhamun's Image" >
+                            <figcaption>Figure: Tutankhamun, the young pharaoh of ancient Egypt.</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Nefertiti</h2>
+                        <p>
+                            Nefertiti was a queen of the 18th Dynasty of Ancient Egypt, the great royal wife of Pharaoh Akhenaten.
+                            Nefertiti and her husband were known for their radical overhaul of state religious policy,
+                            in which they promoted the earliest known form of monotheism,
+                            Atenism, centered on the sun disc and its direct connection to the royal household
+                            In the 20th century, Nefertiti was made famous by the discovery and display of her ancient bust, 
+                            now in Berlin's Neues Museum. The bust is one of the most copied works of the art of ancient Egypt. 
+                        </p>
+                    </td>
+                    <td>
+                        <figure>
+                            <img src="images/Nofretete_Neues_Museum.jpg" alt="Nefertiti's Image">
+                            <figcaption>Figure: Nefertiti,  queen of the 18th Dynasty of Ancient Egypt.</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Ramsis III</h2>
+                        <p>
+                            Ramesses III was the second Pharaoh of the Twentieth Dynasty in Ancient Egypt.
+                            His long reign saw the decline of Egyptian political and economic power,
+                            linked to a series of invasions and internal economic problems that also plagued pharaohs before him.
+                            Rameses III constructed one of the largest mortuary temples of western Thebes, now called Medinet Habu.
+                            He was assassinated in the Harem conspiracy led by his secondary wife Tiye and her eldest son Pentawere.
+                        </p>
+                    </td>
+                    <td>
+                        <figure>
+                            <img src="images/255px-KhonsuTemple-Karnak-RamessesIII-2.jpg" alt="Ramsis III Image">
+                            <figcaption>Figure: RamsisIII, The last pharaoh of the New Kingdom</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+        </table>
+        </main>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<head>
+    <title>travel website</title>
+    <link rel="stylesheet" href="styleH.css" />
+    <style>
+        body{
+    margin: 0;
+    
+}
+.header{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;              
+}
+
+.header .header-links a{
+    text-decoration: none;
+    padding: 5px 15px;
+    color: #52abff;
+    border-radius: 15px;
+}
+.main{
+    padding: 25px 50px;
+    display:grid;
+    align-items: center;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.place{
+    width: 300px;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+}
+.place-info{
+ padding-left: 5px;
+
+}
+.place img{
+    border-radius: 20px 20px 0 0;
+}
+.place-info button{
+    padding: 8px 15px;
+    color: white;
+    border-radius: 15px;
+    background-color: #2386fe;
+    border: none;
+    margin: 5px;
+}
+.place-info button a{
+    text-decoration: none;
+    padding: 5px 8px;
+    color: white;
+    border-radius: 15px;
+}
+@media (max-width: 1024px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px) {
+    .main {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        padding: 15px;}
+}
+.nav-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #1d699f;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+        .nav-links a:hover {
+            color: #1d699f;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 100%;
+            height: 2px;
+            background-color: #1d699f;
+            transition: transform 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links a {
+            animation: fadeIn 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        .nav-links a:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .nav-links a:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .nav-links a:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .nav-links a:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .nav-links a:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img
+          class="logo"
+          src="images/Goo-travel-website-e1677624115963.png"
+          alt="Travel Website Logo"
+        />
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="guide.html">Your Guide</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About Egypt</a>
+        </div>
+        <div id="time" style="color:#1d699f; font-size: 24px;"></div>
+        <script>
+              window.setInterval(function(){
+                  var timeDate= new Date();
+                  document.getElementById("time").textContent=timeDate.getHours()+" : "+timeDate.getMinutes()+" : "+timeDate.getSeconds();
+              },1000);
+        </script>
+      </div>
+      </div>
+    <div class="container">
+        <h1>Your Guide to Egypt</h1>
+    </div>
+    <!-- Main Content Section -->
+        <div class="main">
+            <!-- Pyramids of Giza -->
+            <div class="place">
+                <img src="https://i.pinimg.com/736x/83/2c/44/832c440dacf89c9ae9ceb01ec95adf3b.jpg" alt="Pyramids of Giza" width="300" height="200">
+                <div class="place-info">
+                    <h3>Pyramids of Giza</h3>
+                    <p>One of the Seven Wonders of the Ancient World.</p>
+                    <button>
+                        <a href="https://maps.app.goo.gl/7yHhJ5UYeQ6zDZ5v7" target="_blank">View Location</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Karnak Temple -->
+            <div class="place">
+                <img src="https://i.pinimg.com/736x/4e/8e/86/4e8e86af2929cf2cf366cf42af76d226.jpg" alt="Karnak Temple" width="300" height="200">
+                <div class="place-info">
+                    <h3>Karnak Temple</h3>
+                    <p>The largest religious complex in the ancient world.</p>
+                    <button>
+                    <a href="https://maps.app.goo.gl/C1bAcxJACAD5Eykx5" target="_blank">View Location</a>
+                    </button>
+                </div>     
+            </div>
+
+            <!-- Egyptian Museum -->
+            <div class="place">
+                <img src="https://i.pinimg.com/736x/13/b7/af/13b7af072c2bee943ffeea3824ac7563.jpg" alt="Egyptian Museum" width="300" height="200">
+                <div class="place-info">
+                    <h3>Egyptian Museum</h3>
+                    <p>Home to the largest collection of ancient Egyptian artifacts.</p>
+                    <button>
+                    <a href="https://maps.app.goo.gl/JFnffq76VV2SUTUd8" target="_blank">View Location</a>
+                    </button>
+                </div> 
+            </div>
+
+            <!-- Citadel of Salahdin -->
+            <div class="place">
+                <img src="https://i.pinimg.com/736x/0f/55/a7/0f55a7fc68630045de5045fbb169fcf0.jpg" alt="Citadel of Saladin" width="300" height="200">
+                <div class="place-info">
+                    <h3>Citadel of Saladin</h3>
+                    <p>An architectural marvel and historical landmark in Cairo.</p>
+                    <button>
+                    <a href="https://maps.app.goo.gl/B6Lxsggb8NX6VdRP8" target="_blank">View Location</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Khan El Khalili Market -->
+            <div class="place">
+                <img src="https://i.pinimg.com/736x/8d/03/0d/8d030d17f107c7900b116adc3e237497.jpg" alt="" width="300" height="200">
+                    <div class="place-info">
+                    <h3>Khan El Khalili Market</h3>
+                    <p>Enjoy shopping at one of the oldest markets in the Middle East.</p>
+                    <button>
+                    <a href="https://maps.app.goo.gl/U3dh2wzT3qkd1wtW9" target="_blank">View Location</a>
+                    </button>
+                </div>
+            </div>
+<!-- Red Sea Resorts -->
+            <div class="place">
+                <img src="https://i.pinimg.com/736x/f4/7c/30/f47c30e4442031faead66927fa204e8e.jpg" alt="Red Sea Resorts" width="300" height="200">
+                <div class="place-info">
+                    <h3>Red Sea Resorts</h3>
+                    <p>Relax on the beaches of Hurghada or Sharm El Sheikh.</p>
+                    <button>
+                    <a href="https://maps.app.goo.gl/RxF3z7MeD5gHkMXE7" target="_blank">View Location</a>
+                    </button>
+                </div> 
+            </div>
+        </div>
+</body>
+</html>
